@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Adminpost from "../components/adminpost";
 import AddPost from "../components/addpost";
+import Adminlogin from "../components/adminlogin";
 import Superdelete from "../components/superdelete";
 import db from "../lib/firebase";
 
@@ -59,7 +60,7 @@ function Adminlist() {
 
         <div >
  
-          
+                <Adminlogin />
                 <AddPost changeFunction={refreshData} />
 
                 {posts.map((post) => (

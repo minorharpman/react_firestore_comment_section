@@ -22,7 +22,7 @@ function App() {
 
         <Switch>
 
-          <Route exact path='/' component={List} ></Route>
+          <Route exact path='/'   component={List} ></Route>
           <Route exact path='/adminlist' component={Adminlist} ></Route>
           <Route exact path='/editpost/:id' component={Editpost}></Route>
 
