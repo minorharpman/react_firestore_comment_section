@@ -1,5 +1,5 @@
 # Free Bird Programozó Képző Cirkusz
-# React Js tanfolyam 17. rész Posts Project Firestore kapcsolattal - Edit funkció (Módosít)
+# React Js tanfolyam x. rész Comment Project Firestore kapcsolattal 
 
 A Youtube videó linkje
 
