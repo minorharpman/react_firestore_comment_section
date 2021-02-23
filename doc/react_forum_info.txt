@@ -1,0 +1,29 @@
+
+
+Köztes verzio bemutatása:
+
+npx create-react-app react_firestore_blog_demo
+
+cd react_firestore_blog_demo
+
+npm install
+
+npm install bootstrap
+
+npm install firebase
+
+
+//https://reactrouter.com/web/guides/quick-start
+npm install react-router-dom –save
+
+npm start
+
+
+
+
+
+
+
+
+
+
