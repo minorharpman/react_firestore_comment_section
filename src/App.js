@@ -1,6 +1,6 @@
 import React, { useEffect}  from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import AddPost from "./components/addpost";
+//import AddPost from "./components/addpost";
 import List from "./components/list";
 import Adminlist from "./components/adminlist";
 import Editpost from "./components/editpost";

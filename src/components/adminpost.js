@@ -7,7 +7,7 @@ function Adminpost(props) {
 
 
     const handleSubmit = async (id) => {
-        console.log("id: " + String(id));
+       // console.log("id: " + String(id));
 
 
         //https://firebase.google.com/docs/firestore/manage-data/delete-data#fields
@@ -23,7 +23,7 @@ function Adminpost(props) {
 
 
     return (
-        <div>
+        <div className={props.open ?    "open" : "hidden"}>
       
             <div className="row m-2" >
                 <div className="col" >Post: </div>

@@ -16,6 +16,11 @@ npm install firebase
 //https://reactrouter.com/web/guides/quick-start
 npm install react-router-dom –save
 
+https://stackoverflow.com/questions/51109559/get-cookie-with-react
+https://github.com/js-cookie/js-cookie
+
+npm install js-cookie --save
+
 npm start
 
 

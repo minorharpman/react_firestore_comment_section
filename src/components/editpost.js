@@ -44,7 +44,7 @@ function Editpost(props) {
             title: title
         }).then(function () {
             console.log("Document successfully Updated!");
-            history.push("/");
+            history.push("/adminlist");
         }).catch(function (error) {
             console.error("Error : ", error);
         });
@@ -78,7 +78,7 @@ function Editpost(props) {
 
             </div>
             <div className="col" > <button className="btn btn-danger" onClick={(e) => handleSubmit(params.id)} >Save  </button></div>
-            <div className="col"><Link className="btn btn-primary" to={"/"} >Close</Link></div>
+            <div className="col"><Link className="btn btn-primary" to={"/adminlist"} >Close</Link></div>
 
 
 
