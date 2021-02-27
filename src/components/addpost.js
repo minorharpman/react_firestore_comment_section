@@ -16,7 +16,7 @@ function AddPost(props) {
 
     const test = () => {
 
-        console.log(" AddPost test:" + props.open);
+        console.log(" AddPost test open állapot :" + props.open);
 
     }
 
@@ -37,7 +37,7 @@ function AddPost(props) {
         setTitle("");
     };
     return (
-        <div className={props.open ?    "open" : "hidden"}>
+        <div className={props.open ? "open"  : "hidden"     }>
             <div className="row  mt-4 mb-4 p-4 bg-warning ">
                 <div className="col-md-2">
                     Write me:

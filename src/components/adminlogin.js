@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 
 
 
@@ -29,7 +29,7 @@ function Adminlogin(props) {
     const handleSubmit2 = () => {
     
         props.changeFunction("hidden");
-        Cookies.set('openstatus', 'hidden');
+       // Cookies.set('openstatus', 'hidden');
     };
 
     return (

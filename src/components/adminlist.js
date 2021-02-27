@@ -4,7 +4,7 @@ import AddPost from "../components/addpost";
 import Adminlogin from "../components/adminlogin";
 import Superdelete from "../components/superdelete";
 import db from "../lib/firebase";
-import Cookies from 'js-cookie';
+//import Cookies from 'js-cookie';
 
 function Adminlist() {
 
@@ -25,17 +25,23 @@ function Adminlist() {
 
 
     const opener = (a) => {
-        console.log("openstatus: " +  Cookies.get('openstatus'));
-        console.log("test adminlist:" + a);
+       // console.log("openstatus: " +  Cookies.get('openstatus'));
+        console.log("test adminlist:" + a+ ", " + typeof  a );
         console.log("test adminlist open :" + open);
 
-        if(a =="open" || Cookies.get('openstatus') == "open"){
-            Cookies.set('openstatus', 'open');
-            setOpen("open");
-        }else if( Cookies.get('openstatus') == "hidden"){
-            Cookies.set('openstatus', 'hidden');
-            setOpen("hidden");
+        setOpen(a);
+        //setOpen("open");
+
+        //if(a =="open" || Cookies.get('openstatus') == "open"){
+            //ez itt miért nem műxik
+        if(a != undefined && a == "open"){
+          //  Cookies.set('openstatus', 'open');
+           // setOpen("open");
         }
+        /*else if( Cookies.get('openstatus') == "hidden"){
+          //  Cookies.set('openstatus', 'hidden');
+            setOpen("hidden");
+        }*/
 
 
     }
