@@ -4,7 +4,7 @@ import AddPost from "../components/addpost";
 import Adminlogin from "../components/adminlogin";
 import Superdelete from "../components/superdelete";
 import db from "../lib/firebase";
-//import Cookies from 'js-cookie';
+import Cookies from 'js-cookie';
 
 function Adminlist() {
 
@@ -24,24 +24,30 @@ function Adminlist() {
     }, []);
 
 
-    const opener = (a) => {
-       // console.log("openstatus: " +  Cookies.get('openstatus'));
-        console.log("test adminlist:" + a+ ", " + typeof  a );
-        console.log("test adminlist open :" + open);
+    const opener = (status) => {
 
-        setOpen(a);
-        //setOpen("open");
+        console.log("adminlist - opener :" + status+ ", " + typeof  status );
+        console.log("adminlist variable open :" + open);
+        console.log("suti status  :" + Cookies.get('openstatus'));
 
-        //if(a =="open" || Cookies.get('openstatus') == "open"){
-            //ez itt miért nem műxik
-        if(a != undefined && a == "open"){
-          //  Cookies.set('openstatus', 'open');
-           // setOpen("open");
+
+
+        if( (typeof status !== "undefined" && status =="open" && status !="hidden")  ){
+
+            console.log("A ág");
+
+            Cookies.set('openstatus', 'open');
+            setOpen("open");
         }
-        /*else if( Cookies.get('openstatus') == "hidden"){
-          //  Cookies.set('openstatus', 'hidden');
-            setOpen("hidden");
-        }*/
+        else if( Cookies.get('openstatus') == "open" ){
+            console.log("B ág");
+            setOpen("open");
+        }  else {
+
+            console.log("C ág");
+               Cookies.set('openstatus', 'hidden');
+              setOpen("hidden");
+          }
 
 
     }

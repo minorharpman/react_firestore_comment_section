@@ -1,12 +1,47 @@
 
-import React, { useState } from "react";
-// import Cookies from 'js-cookie';
+import React, { useEffect, useState } from "react";
+import Cookies from 'js-cookie';
 
 
 
 function Adminlogin(props) {
 
     const [title, setTitle] = useState("");
+    const [valami, setValami] = useState('open');
+
+
+
+    useEffect(() => {
+        changeView();
+
+        console.log("suti status LOgin :" + Cookies.get('openstatus'));
+        console.log("LOgin status valami :" + valami);
+
+
+    }, []);
+
+
+
+    const changeView = () => {
+
+        if ( (typeof valami !== "undefined" && valami =="open" )  && Cookies.get('openstatus') == "open") {
+            console.log("Login A ág");
+
+
+            setValami("open");
+         
+
+        } else {
+
+            console.log("Login B ág");
+
+            setValami("hidden");
+
+
+        }
+
+    }
+
 
     const handleSubmit = () => {
 
@@ -19,7 +54,7 @@ function Adminlogin(props) {
             props.changeFunction("open");
         } else {
             console.log("False");
-            
+
         }
 
     };
@@ -27,18 +62,26 @@ function Adminlogin(props) {
 
 
     const handleSubmit2 = () => {
-    
+        setValami("open");
+        Cookies.set('openstatus', 'hidden');
         props.changeFunction("hidden");
-       // Cookies.set('openstatus', 'hidden');
+
+        
+
     };
+
+
+
+
+
 
     return (
 
         <div className="row  mt-4 mb-4 p-4 bg-warning">
-            <div className="col-md-2">
+            <div className={valami == "hidden" ? "open col-md-2"  : "hidden"   } >
                 Password:
             </div>
-            <div className="col-md-2" >
+            <div className={valami == "hidden" ? "open col-md-2"  : "hidden" }  >
                 <input
                     type="text"
                     className="form-control"
@@ -48,7 +91,7 @@ function Adminlogin(props) {
 
             </div>
             <div className="col-md-2" ></div>
-            <button className="btn btn-primary btn-lg col-md-2"
+            <button  className={valami == "hidden" ? "open btn btn-primary btn-lg col-md-2"  : "hidden"   }  
                 onClick={handleSubmit}
             >
                 Add
@@ -63,5 +106,7 @@ function Adminlogin(props) {
 
 
     );
+
+
 };
 export default Adminlogin;

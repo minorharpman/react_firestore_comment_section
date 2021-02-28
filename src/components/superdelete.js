@@ -40,7 +40,7 @@ function Superdelete(props) {
         setTitle("");
     };
     return (
-        <div className={props.open ? "open" : "hidden"}>
+        <div className={props.open == "open" ? "open"  : "hidden"   }>
             <div className="row  mt-4 mb-4 p-4 bg-secondary text-white">
                 <div className="col-md-12"><h4> Delete (start chars):</h4></div>
                 <div className="col-md-2">

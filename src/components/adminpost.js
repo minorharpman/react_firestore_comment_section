@@ -23,7 +23,7 @@ function Adminpost(props) {
 
 
     return (
-        <div className={props.open ?    "open" : "hidden"}>
+        <div className={props.open == "open" ? "open"  : "hidden"   }>
       
             <div className="row m-2" >
                 <div className="col" >Post: </div>
