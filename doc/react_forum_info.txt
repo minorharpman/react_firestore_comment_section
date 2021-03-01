@@ -21,15 +21,18 @@ https://github.com/js-cookie/js-cookie
 
 npm install js-cookie --save
 
-npm install use-force-update
 
-npm uninstall use-force-update
 
 npm start
 
 
+https://www.robinwieruch.de/firebase-deploy-react-js
 
 
+https://freebird-react-posts-demo.web.app/
+
+
+https://firebase.google.com/docs/ads
 
 
 
