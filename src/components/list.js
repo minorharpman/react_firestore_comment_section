@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Post from "../components/post";
 import AddPost from "../components/addpost";
-import Superdelete from "../components/superdelete";
 import db from "../lib/firebase";
 
 function List() {
@@ -9,6 +8,7 @@ function List() {
     //Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
     //https://reactjs.org/docs/hooks-state.html
     const [posts, setPosts] = useState([]);
+    const [open, setOpen] = useState('open');
 
     //https://reactjs.org/docs/hooks-effect.html
     //They let you use state and other React features without writing a class.  // componentDidMount(), componentDidUpdate()
@@ -58,9 +58,7 @@ function List() {
     return (
 
         <div >
- 
-          
-                <AddPost changeFunction={refreshData} />
+                <AddPost changeFunction={refreshData} open={open} />
 
                 {posts.map((post) => (
                     <Post post={post} key={post.id} changeFunction={refreshData} />

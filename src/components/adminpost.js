@@ -26,13 +26,12 @@ function Adminpost(props) {
         <div className={props.open == "open" ? "open"  : "hidden"   }>
       
             <div className="row m-2" >
-                <div className="col" >Post: </div>
-                <div className="col"> {props.post.id}</div>
+                <div className="col w-50 smalltext"> {props.post.id}</div>
                 <div className="col" > {props.post.title}</div>
                 <div className="col" > {props.post.mydate}</div>
                {/*<div className="col" > {String(props.post.createdAt)}</div> */}
-                <div className="col" > <button className="btn btn-danger" onClick={(e) => handleSubmit(props.post.id)} >Delete  </button></div>
-                <div className="col" ><Link className="btn btn-primary" to={"/editpost/"+props.post.id} >Edit</Link></div>
+                <div className="col text-center" > <button className="btn btn-danger" onClick={(e) => handleSubmit(props.post.id)} >Delete  </button></div>
+                <div className="col text-right" ><Link className="btn btn-primary " to={"/editpost/"+props.post.id} >Edit</Link></div>
 
             </div>
 

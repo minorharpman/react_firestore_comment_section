@@ -65,7 +65,7 @@ function Editpost(props) {
         <div className="row  mt-4 mb-4 p-4 bg-warning ">
 
             <div className="col" >Edit post:</div>
-            <div className="col" >ID:{params.id}   {post.title}</div>
+         
     
             <div className="col-md-6" >
                 <input

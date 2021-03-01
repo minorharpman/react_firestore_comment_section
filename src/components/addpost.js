@@ -47,12 +47,13 @@ function AddPost(props) {
                         type="text"
                         className="form-control"
                         value={title}
-                        onChange={(e) => setTitle(e.target.value)}
+                        placeholder="You can type maximum 150 characters"
+                        onChange={(e) => setTitle((e.target.value).substr(0, 150))}
                     />
 
                 </div>
                 <div className="col-md-2" ></div>
-                <button className="btn btn-primary btn-lg"
+                <button className="btn btn-primary btn-lg ml-auto"
                     onClick={handleSubmit}
                 >
                     Add

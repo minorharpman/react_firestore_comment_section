@@ -42,11 +42,11 @@ function Superdelete(props) {
     return (
         <div className={props.open == "open" ? "open"  : "hidden"   }>
             <div className="row  mt-4 mb-4 p-4 bg-secondary text-white">
-                <div className="col-md-12"><h4> Delete (start chars):</h4></div>
-                <div className="col-md-2">
+                <div className="col-md-12 text-right"><h4> Multi delete (start chars):</h4></div>
+                <div className="col-md-6 text-right">
                     Type some  start chars of the Title:
             </div>
-                <div className="col-md-2" >
+                <div className="col-md-4" >
                     <input
                         type="text"
                         className="form-control"
@@ -55,8 +55,7 @@ function Superdelete(props) {
                     />
 
                 </div>
-                <div className="col-md-2" ></div>
-                <button className="btn btn-danger btn-lg"
+                <button className="btn btn-danger btn-lg ml-auto"
                     onClick={handleSubmit}
                 >
                     Delete

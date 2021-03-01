@@ -21,6 +21,10 @@ https://github.com/js-cookie/js-cookie
 
 npm install js-cookie --save
 
+npm install use-force-update
+
+npm uninstall use-force-update
+
 npm start
 
 

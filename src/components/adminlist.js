@@ -92,7 +92,7 @@ function Adminlist() {
     return (
 
         <div >
-
+            <Adminlogin changeFunction={opener} />
 
             <AddPost changeFunction={refreshData} open={open} />
 
@@ -102,7 +102,7 @@ function Adminlist() {
 
             <Superdelete changeFunction={refreshData} open={open} />
 
-            <Adminlogin changeFunction={opener} />
+           
 
         </div>
 
